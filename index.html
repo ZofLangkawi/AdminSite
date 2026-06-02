@@ -1,10 +1,53 @@
 <!DOCTYPE html>
-<html>
+<html lang="fr">
 <head>
-  <title>Mon site</title>
+  <meta charset="UTF-8">
+  <title>Appartements</title>
+
+  <style>
+    body {
+      font-family: Arial;
+    }
+
+    #galerie img {
+      width: 200px;
+      margin: 5px;
+    }
+  </style>
 </head>
+
 <body>
-  <h1>Hello World 🚀</h1>
-  <p>Nous sommes une petite foncière à taille humaine</p>
+
+<h1>Mes appartements</h1>
+
+<div id="galerie"></div>
+
+<script>
+fetch("appartement.json")
+  .then(response => response.json())
+  .then(data => {
+
+    const container = document.getElementById("galerie");
+
+    data.forEach(appart => {
+
+      // Titre de l'appartement
+      const titre = document.createElement("h2");
+      titre.textContent = appart.titre;
+      container.appendChild(titre);
+
+      // Images
+      appart.images.forEach(img => {
+        const image = document.createElement("img");
+        image.src = img;
+        container.appendChild(image);
+      });
+
+    });
+
+  })
+  .catch(err => console.error("Erreur JSON :", err));
+</script>
+
 </body>
 </html>
