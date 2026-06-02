@@ -2,52 +2,15 @@
 <html lang="fr">
 <head>
   <meta charset="UTF-8">
-  <title>Appartements</title>
-
-  <style>
-    body {
-      font-family: Arial;
-    }
-
-    #galerie img {
-      width: 200px;
-      margin: 5px;
-    }
-  </style>
+  <title>Galerie d'images</title>
 </head>
-
 <body>
 
-<h1>Mes appartements</h1>
+  <h1>Mes images</h1>
 
-<div id="galerie"></div>
-
-<script>
-fetch("appartement.json")
-  .then(response => response.json())
-  .then(data => {
-
-    const container = document.getElementById("galerie");
-
-    data.forEach(appart => {
-
-      // Titre de l'appartement
-      const titre = document.createElement("h2");
-      titre.textContent = appart.titre;
-      container.appendChild(titre);
-
-      // Images
-      appart.images.forEach(img => {
-        const image = document.createElement("img");
-        image.src = img;
-        container.appendChild(image);
-      });
-
-    });
-
-  })
-  .catch(err => console.error("Erreur JSON :", err));
-</script>
+  <img src="image1.jpg" alt="Image 1" width="300">
+  <img src="image2.jpg" alt="Image 2" width="300">
+  <img src="image3.jpg" alt="Image 3" width="300">
 
 </body>
 </html>
