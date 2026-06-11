@@ -2,7 +2,7 @@
 <html lang="fr">
 <head>
 <meta charset="UTF-8">
-<title>Galerie appartement</title>
+<title>Appartement à louer</title>
 
 <style>
 body {
@@ -12,18 +12,34 @@ body {
   color: #222;
 }
 
+/* TITRE */
 h1 {
   text-align: center;
-  margin: 30px 0;
+  margin: 30px 0 10px;
 }
 
+/* DESCRIPTION LBC */
+.lbc-description {
+  max-width: 900px;
+  margin: 0 auto 30px;
+  padding: 18px 22px;
+  background: white;
+  border-radius: 14px;
+  box-shadow: 0 8px 25px rgba(0,0,0,0.08);
+  color: #333;
+  font-size: 14.5px;
+  line-height: 1.6;
+  white-space: pre-line;
+}
+
+/* TITRES SECTIONS */
 h2 {
   max-width: 1100px;
   margin: 40px auto 10px;
   padding: 0 20px;
 }
 
-/* --- DESCRIPTION SECTION --- */
+/* TEXTE SECTION */
 .section-text {
   max-width: 1100px;
   margin: 0 auto 15px;
@@ -32,7 +48,7 @@ h2 {
   line-height: 1.5;
 }
 
-/* --- GRID --- */
+/* GALERIE */
 .gallery {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
@@ -56,7 +72,7 @@ h2 {
   box-shadow: 0 10px 25px rgba(0,0,0,0.15);
 }
 
-/* --- LIGHTBOX --- */
+/* LIGHTBOX */
 .lightbox {
   display: none;
   position: fixed;
@@ -79,7 +95,7 @@ h2 {
   transition: opacity 0.2s ease;
 }
 
-/* NAV */
+/* NAVIGATION */
 .nav {
   position: absolute;
   width: 100%;
@@ -104,7 +120,7 @@ h2 {
   background: rgba(255,255,255,0.3);
 }
 
-/* COUNTER */
+/* COMPTEUR */
 .counter {
   position: absolute;
   top: 20px;
@@ -112,7 +128,6 @@ h2 {
   font-size: 14px;
   opacity: 0.8;
 }
-
 </style>
 </head>
 
@@ -120,10 +135,88 @@ h2 {
 
 <h1>Appartement à louer</h1>
 
+<!-- DESCRIPTION LBC -->
+<div class="lbc-description">
+
+📍 Lille Hellemmes – Entre les métros Marbrerie et Hellemmes
+
+Vous recherchez une colocation confortable, moderne et conviviale ? Découvrez cette belle maison bourgeoise de 160 m² entièrement rénovée, pensée pour le confort des étudiants et jeunes actifs.
+
+________________________________________
+
+🛏️ Chambres disponibles
+
+🌿 Chambre 1 – Côté jardin  
+🚿 Douche attenante privative  
+💰 460 € + 75 € de charges  
+
+🌿 Chambre 2 – Côté jardin  
+🚿 Douche privative située à l'étage  
+💰 450 € + 75 € de charges  
+
+🏙️ Chambre 3 – Côté rue  
+🚿 Douche attenante privative  
+💰 440 € + 75 € de charges  
+
+Toutes les chambres sont équipées de :
+✅ Lit avec matelas
+✅ Bureau et lampe de travail
+✅ Armoire de rangement
+
+________________________________________
+
+🏠 La maison
+
+✨ Maison bourgeoise de 160 m² entièrement rénovée  
+🪵 Parquet et décoration chaleureuse  
+🍽️ Espace de vie commun de 40 m²  
+• Cuisine équipée avec îlot central  
+• Grandes tables modulables  
+• Salon lumineux avec grandes baies vitrées  
+
+🧺 Buanderie  
+• Lave-linge  
+• Sèche-linge  
+
+📺 Équipements  
+• TV 65 pouces  
+• Lave-vaisselle  
+• Internet haut débit  
+
+🚿 Sanitaires  
+• 1 WC par étage  
+
+________________________________________
+
+🌿 Jardin
+
+• Jardin privatif de 25 m²  
+• Cabane de jardin  
+• Table extérieure  
+• Espace vert calme  
+
+________________________________________
+
+📍 Emplacement  
+🚇 Métros proches  
+🛒 Commerces  
+🎓 Universités accessibles  
+
+________________________________________
+
+👤 Profil recherché  
+✔️ Sérieux  
+✔️ Colocation  
+✔️ Bonne ambiance  
+📅 2 ans minimum  
+💰 Garant demandé  
+
+</div>
+
 <!-- SALON -->
 <h2>Le salon</h2>
 <div class="section-text">
-  Un espace lumineux avec canapé convertible, TV et coin repas.
+  Espace de vie lumineux avec coin repas et salon confortable.
 </div>
 
 <div class="gallery">
@@ -136,7 +229,7 @@ h2 {
 <!-- CHAMBRE -->
 <h2>La chambre</h2>
 <div class="section-text">
-  Chambre calme avec lit double et rangements intégrés.
+  Chambres calmes avec rangements et espace bureau.
 </div>
 
 <div class="gallery">
@@ -157,6 +250,7 @@ h2 {
   </div>
 
   <img id="lightbox-img">
+
 </div>
 
 <script>
@@ -166,7 +260,6 @@ const lightboxImg = document.getElementById("lightbox-img");
 const counter = document.getElementById("counter");
 
 const allImages = Array.from(images);
-
 let currentIndex = 0;
 
 function showImage(index) {
