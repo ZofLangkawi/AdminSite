@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <title>Appartement à louer</title>
 
-<!-- POLICE PLUS MODERNE -->
+<!-- POLICE MODERNE -->
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
 
 <style>
@@ -25,7 +25,7 @@ h1 {
   letter-spacing: -0.5px;
 }
 
-/* HERO TOP */
+/* HERO */
 .hero-box {
   max-width: 900px;
   margin: 0 auto 20px;
@@ -76,7 +76,7 @@ h1 {
   background: #1fb857;
 }
 
-/* DESCRIPTION */
+/* DESCRIPTION (COMPLÈTE) */
 .lbc-description {
   max-width: 900px;
   margin: 0 auto 40px;
@@ -108,7 +108,7 @@ h2 {
   color: #555;
 }
 
-/* HERO GALLERY (AIRBNB STYLE) */
+/* HERO GALLERY */
 .hero-gallery {
   max-width: 1100px;
   margin: 20px auto;
@@ -133,7 +133,7 @@ h2 {
   gap: 10px;
 }
 
-/* GALLERY SECTIONS */
+/* GALLERY */
 .gallery {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
@@ -160,7 +160,7 @@ h2 {
 /* CONTACT FORM */
 .contact-box {
   max-width: 900px;
-  margin: 30px auto;
+  margin: 40px auto;
   padding: 0 20px;
 }
 
@@ -183,6 +183,7 @@ h2 {
   border-radius: 10px;
   cursor: pointer;
   width: 100%;
+  font-size: 15px;
 }
 
 /* LIGHTBOX */
@@ -242,14 +243,15 @@ h2 {
 
 <h1>Appartement à louer</h1>
 
-<!-- HERO TOP -->
+<!-- HERO -->
 <div class="hero-box">
   <div class="price">440€ – 460€ / mois</div>
-  <div class="summary">📍 Lille Hellemmes · 🏠 160 m² · 🛏️ 3 chambres · 🌿 Jardin</div>
+  <div class="summary">
+    📍 Lille Hellemmes · 🏠 160 m² · 🛏️ 3 chambres · 🌿 Jardin
+  </div>
 
   <div class="actions">
     <button class="btn btn-primary">Contacter</button>
-
     <a href="https://wa.me/33600000000" target="_blank">
       <button class="btn btn-wa">WhatsApp</button>
     </a>
@@ -265,24 +267,81 @@ h2 {
   </div>
 </div>
 
-<!-- DESCRIPTION -->
+<!-- DESCRIPTION COMPLETE -->
 <div class="lbc-description">
 
 📍 Lille Hellemmes – Entre les métros Marbrerie et Hellemmes
 
-Vous recherchez une colocation confortable, moderne et conviviale ? Découvrez cette belle maison bourgeoise de 160 m² entièrement rénovée.
+Vous recherchez une colocation confortable, moderne et conviviale ? Découvrez cette belle maison bourgeoise de 160 m² entièrement rénovée, pensée pour le confort des étudiants et jeunes actifs.
 
 ________________________________________
 
 🛏️ Chambres disponibles
-🌿 Chambre 1 – 460€
-🌿 Chambre 2 – 450€
-🏙️ Chambre 3 – 440€
 
-🏠 Maison de 160 m² rénovée
-🌿 Jardin privatif
-📺 TV 65 pouces
-🚇 Métros proches
+🌿 Chambre 1 – Côté jardin  
+🚿 Douche attenante privative  
+💰 460 € + 75 € de charges  
+
+🌿 Chambre 2 – Côté jardin  
+🚿 Douche privative située à l'étage  
+💰 450 € + 75 € de charges  
+
+🏙️ Chambre 3 – Côté rue  
+🚿 Douche attenante privative  
+💰 440 € + 75 € de charges  
+
+Toutes les chambres sont équipées de :
+✅ Lit avec matelas
+✅ Bureau et lampe de travail
+✅ Armoire de rangement
+
+________________________________________
+
+🏠 La maison
+
+✨ Maison bourgeoise de 160 m² entièrement rénovée  
+🪵 Parquet et décoration chaleureuse  
+🍽️ Espace de vie commun de 40 m²  
+• Cuisine équipée avec îlot central  
+• Grandes tables modulables  
+• Salon lumineux avec grandes baies vitrées  
+
+🧺 Buanderie  
+• Lave-linge  
+• Sèche-linge  
+
+📺 Équipements  
+• TV 65 pouces  
+• Lave-vaisselle  
+• Internet haut débit  
+
+🚿 Sanitaires  
+• 1 WC par étage  
+
+________________________________________
+
+🌿 Jardin
+
+• Jardin privatif de 25 m²  
+• Cabane de jardin  
+• Table extérieure  
+• Espace vert calme  
+
+________________________________________
+
+📍 Emplacement  
+🚇 Métros proches  
+🛒 Commerces  
+🎓 Universités accessibles  
+
+________________________________________
+
+👤 Profil recherché  
+✔️ Sérieux  
+✔️ Colocation  
+✔️ Bonne ambiance  
+📅 2 ans minimum  
+💰 Garant demandé  
 
 </div>
 
@@ -294,6 +353,7 @@ ________________________________________
   <img src="appart1.JPG">
   <img src="appart2.JPG">
   <img src="appart3.JPG">
+  <img src="appart4.JPG">
 </div>
 
 <!-- CHAMBRE -->
@@ -301,9 +361,10 @@ ________________________________________
 <div class="section-text">Chambres calmes et équipées.</div>
 
 <div class="gallery">
-  <img src="appart4.JPG">
   <img src="appart5.JPG">
   <img src="appart1.JPG">
+  <img src="appart2.JPG">
+  <img src="appart3.JPG">
 </div>
 
 <!-- CONTACT FORM -->
@@ -312,17 +373,21 @@ ________________________________________
   <input type="text" placeholder="Nom">
   <input type="email" placeholder="Email">
   <textarea rows="4" placeholder="Message"></textarea>
-  <button>Envoyer la demande</button>
+  <button>Envoyer</button>
 </div>
 
 <!-- LIGHTBOX -->
 <div class="lightbox" id="lightbox">
+
   <div class="counter" id="counter"></div>
+
   <div class="nav">
     <button id="prev">‹</button>
     <button id="next">›</button>
   </div>
+
   <img id="lightbox-img">
+
 </div>
 
 <script>
